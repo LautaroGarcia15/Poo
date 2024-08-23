@@ -1,2 +1,0 @@
-# Poo
-Ejercitación de POO
