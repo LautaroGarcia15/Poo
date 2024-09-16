@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Agenda/Agenda.iml" filepath="$PROJECT_DIR$/Agenda/Agenda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arquitectura/Arquitectura.iml" filepath="$PROJECT_DIR$/Arquitectura/Arquitectura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atributos_estaticos/Atributos_estaticos.iml" filepath="$PROJECT_DIR$/Atributos_estaticos/Atributos_estaticos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjTipoParcialCiclistas/EjTipoParcialCiclistas.iml" filepath="$PROJECT_DIR$/EjTipoParcialCiclistas/EjTipoParcialCiclistas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Juego/Juego.iml" filepath="$PROJECT_DIR$/Juego/Juego.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Poo.iml" filepath="$PROJECT_DIR$/.idea/Poo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proximo/Prueba.iml" filepath="$PROJECT_DIR$/Proximo/Prueba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/persona/persona.iml" filepath="$PROJECT_DIR$/persona/persona.iml" />
+    </modules>
+  </component>
+</project>
