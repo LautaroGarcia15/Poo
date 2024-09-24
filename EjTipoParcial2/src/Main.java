@@ -46,7 +46,7 @@ public class Main {
         System.out.println("");
 
         System.out.println("TRANSFERENCIAS: ");
-        System.out.println(cuenta1.transferirSaldo(cuenta2, 1000000)); //devuelve true si se pudo realizar la transferencia o false si no se pudo
+        System.out.println(cuenta1.transferirSaldo(cuenta2, 50000)); //devuelve true si se pudo realizar la transferencia o false si no se pudo
         System.out.println(cuenta1.transferirSaldo(cuenta2, 50000));
 
         System.out.println("");

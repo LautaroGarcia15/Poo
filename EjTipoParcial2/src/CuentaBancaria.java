@@ -12,7 +12,7 @@ public abstract class CuentaBancaria {
         this.numeroCuentaBancaria = numeroCuentaBancaria;
         this.saldo = 0.0;
         this.porcentadeInteres = 0.37;
-        this.estadoCuenta = false;
+        this.estadoCuenta = false; // si la cuenta esta activa devuelve true, de lo contrario devuelve false
     }
 
     public CuentaBancaria() { //Polimorfismo
@@ -46,30 +46,32 @@ public abstract class CuentaBancaria {
         return saldo;
     }
 
-    public boolean isEstadoCuenta() {
-        return estadoCuenta;
-    }
-
-    public void setEstadoCuenta(boolean estadoCuenta) {
+    public void chequearEstadoDeCuenta() { //permite chequear el estado de la cuenta despues de cada operacion
         if(saldo>0){
             estadoCuenta = true;
+        }else {
+            estadoCuenta = false;
         }
     }
 
-    public void cargarSaldo(double ingreso) {
+    public void cargarSaldo(double ingreso) { //operacion que permite cargar saldo
         this.saldo += ingreso;
+        chequearEstadoDeCuenta();
     }
 
-    public abstract String imprimirDatos();
+    public abstract String imprimirDatos(); // funcion para imprimir los datos
 
     public String consultarSaldo(){
-        return  "El saldo de la cuenta: "+numeroCuentaBancaria+" es: "+saldo; //return un STIRing
+        return  "El saldo de la cuenta: "+numeroCuentaBancaria+" es: "+saldo; //return  String
     }
 
-    public boolean retirarSaldo(double retiro){
-        if(saldo >= retiro){
-            saldo -= retiro;
-            return true;
+    public boolean retirarSaldo(double retiro){ // funcion que permite retirar dinero
+        if (estadoCuenta) {                     // devuelve true si la operacion se realizo correctamente
+            if (saldo >= retiro) {
+                saldo -= retiro;
+                chequearEstadoDeCuenta();
+                return true;
+            }
         }
         return false;
     }
@@ -83,10 +85,13 @@ public abstract class CuentaBancaria {
     }
 
     public boolean transferirSaldo(CuentaBancaria destino, double monto){
-        if(monto <= this.saldo){
-            destino.saldo += monto;
-            this.saldo -= monto;
-            return true;
+        if (estadoCuenta) {
+            if (monto <= this.saldo) {
+                destino.saldo += monto;
+                this.saldo -= monto;
+                chequearEstadoDeCuenta();
+                return true;
+            }
         }
         return false;
     }

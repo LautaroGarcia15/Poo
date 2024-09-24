@@ -14,25 +14,25 @@ public class Main {
         ciclista2.setTiempoEnCarrera(456);
         ciclista3.setTiempoEnCarrera(789);
 
-        equipo1.agregarCiclista(ciclista1);
-        equipo1.agregarCiclista(ciclista2);
-        equipo2.agregarCiclista(ciclista3);
+        System.out.println(equipo1.agregarCiclista(ciclista1));
+        System.out.println(equipo1.agregarCiclista(ciclista2));
+        System.out.println(equipo2.agregarCiclista(ciclista3));
 
         System.out.println("");
 
-        //equipo1.listarCiclistas();
-        //equipo2.listarCiclistas();
+        System.out.println(equipo1.listarCiclistas());
+        System.out.println(equipo2.listarCiclistas());
 
-        equipo1.listarNombresDeCiclistasPorEquipo();
-
-        System.out.println("");
-
-        equipo2.listarNombresDeCiclistasPorEquipo();
+        System.out.println(equipo1.listarNombresDeCiclistasPorEquipo());
 
         System.out.println("");
 
-        equipo1.tiempoTotal();
-        equipo2.tiempoTotal();
+        System.out.println(equipo2.listarNombresDeCiclistasPorEquipo());
+
+        System.out.println("");
+
+        System.out.println(equipo1.tiempoTotal());
+        System.out.println(equipo2.tiempoTotal());
 
         System.out.println("");
 

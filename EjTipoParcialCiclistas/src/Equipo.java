@@ -19,35 +19,36 @@ public class Equipo {
         this.nombreEquipo = nombreEquipo;
     }
 
-    protected void agregarCiclista(Ciclista ciclista){
+    protected String agregarCiclista(Ciclista ciclista){
         if(cantidadEquipo<=equipo.length){
             equipo[cantidadEquipo] = ciclista;
             cantidadEquipo++;
+            return "El ciclista se agrego correctamente";
         }else{
-            System.out.println("El equipo esta lleno.");
+            return "El equipo esta lleno.";
         }
     }
 
-    protected void listarCiclistas(){                                       //LISTA LOS CILISTAS Y TODOS SUS DATOS
-        System.out.println("EQUIPO: "+ nombreEquipo);
+    protected Ciclista listarCiclistas(){                                       //LISTA LOS CILISTAS Y TODOS SUS DATOS
         for(int i = 0; i<equipo.length && equipo[i] != null;i++){
-            System.out.println(equipo[i]);
+            return equipo[i];
         }
+        return null;
     }
 
-    protected void listarNombresDeCiclistasPorEquipo(){
-        System.out.println("LOS CILISTAS DEL EQUIPO "+nombreEquipo+" SON: ");
+    protected String listarNombresDeCiclistasPorEquipo(){
         for(int i = 0; i<= equipo.length && equipo[i]!=null;i++){
-            System.out.println(equipo[i].getNombreCiclista());
+            return  equipo[i].getNombreCiclista();
         }
+        return null;
     }
 
-    protected void tiempoTotal(){
+    protected String tiempoTotal(){
         int tiempoTotal = 0;
         for(int i = 0; i<equipo.length && equipo[i] != null;i++){
             tiempoTotal =+ equipo[i].getTiempoEnCarrera();
         }
-        System.out.println("El tiempo total del equipo '"+ nombreEquipo +"' es: "+tiempoTotal);;
+        return "El tiempo total del equipo '"+ nombreEquipo +"' es: "+tiempoTotal;
     }
 
     protected String listarDatosCiclista(int identificador){
