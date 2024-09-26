@@ -3,6 +3,11 @@ public abstract class Ciclista {
     private String nombreCiclista;
     private int tiempoEnCarrera;
 
+    public Ciclista() {   //estoy aplicando polimorfismo dado que
+                          // uso dos firmas distintoas, la vacia,
+                            // y la que setea atributos.
+    }
+
     public Ciclista(int identifiadorCiclista, String nombreCiclista) {
         this.identifiadorCiclista = identifiadorCiclista;
         this.nombreCiclista = nombreCiclista;
